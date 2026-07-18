@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Código Divino</title>
+<link rel="canonical" href="https://SEU-DOMINIO.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Código Divino">
+<meta property="og:url" content="https://SEU-DOMINIO.com/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- ========== PIXEL: cole seu código aqui ========== -->
+<!-- XXXXX -->
+<!-- ================================================ -->
+
+<style>
+:root{
+  --gold:#FFC300;
+  --brown:#704F26;
+  --beige:#E8DEC1;
+  --beige-alt:#E3D8B1;
+  --card:#ECEFF3;
+  --green:#07BA19;
+  --green-hover:#1D1E20;
+  --dark:#1D1E20;
+  --ink:#000;
+  --ink-soft:#404040;
+  --red:#CC0909;
+  --price:#2AA81C;
+  --display:'Playfair Display',serif;
+  --body:Arial,Helvetica,sans-serif;
+  --mont:'Montserrat',sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:var(--body);
+  color:var(--ink);
+  background:#fff;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block;}
+
+.wrap{max-width:1224px;margin:0 auto;padding:0 16px;}
+.narrow{max-width:940px;margin-left:auto;margin-right:auto;}
+.tight{max-width:700px;margin-left:auto;margin-right:auto;}
+
+section{padding:64px 0;}
+@media(max-width:768px){section{padding:44px 0;}}
+
+.bg-beige{background:var(--beige);}
+.bg-beige-alt{background:var(--beige-alt);}
+.bg-white{background:#fff;}
+
+/* fundo pergaminho com overlay 65% */
+.bg-parchment{
+  position:relative;
+  background:var(--beige);
+  isolation:isolate;
+}
+.bg-parchment::before{
+  content:"";
+  position:absolute;inset:0;z-index:-2;
+  background:url('https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920/mv0J6lreP1hM886K/pergament-papier-hintergrund-textur-16442127221im-YZ9jqabgOjt55JG5.jpg') center/cover no-repeat;
+}
+.bg-parchment::after{
+  content:"";
+  position:absolute;inset:0;z-index:-1;
+  background:rgba(0,0,0,.65);
+}
+
+/* ---------- tipografia ---------- */
+.display{font-family:var(--display);font-weight:500;line-height:1.3;margin:0;}
+.h-gold{color:var(--gold);}
+.h-brown{color:var(--brown);}
+
+h1,h2,h3{margin:0;}
+
+.sec-title{
+  font-family:var(--display);font-weight:500;
+  font-size:clamp(24px,3.2vw,40px);
+  line-height:1.3;text-align:center;margin:0 0 24px;
+}
+.lead{
+  font-family:var(--body);font-weight:400;
+  font-size:clamp(16px,1.9vw,24px);
+  line-height:1.3;text-align:center;margin:0 auto 32px;
+}
+
+/* ---------- botão ---------- */
+.btn{
+  display:block;width:300px;max-width:100%;
+  margin:32px auto 0;
+  padding:16px 24px;
+  background:var(--green);color:#fff;
+  font-family:var(--mont);font-weight:700;font-size:16px;
+  text-align:center;text-decoration:none;
+  border-radius:25px;
+  transition:background .2s ease;
+}
+.btn:hover,.btn:focus-visible{background:var(--green-hover);color:#fff;}
+.btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px;}
+@media(max-width:768px){.btn{width:100%;font-size:15px;}}
+
+/* ---------- HERO ---------- */
+.hero{
+  position:relative;
+  background:#E6C57A url('https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920/mv0J6lreP1hM886K/teste-wp-dWxO7M149zSxqZ4n.webp') center/cover no-repeat;
+  padding:56px 0 64px;
+  text-align:center;
+}
+.hero-brand{
+  font-family:var(--display);font-weight:700;
+  color:var(--gold);
+  font-size:clamp(28px,3.6vw,32px);
+  line-height:1.3;margin:0 0 16px;
+}
+.hero-head{
+  font-family:var(--body);font-weight:700;color:#fff;
+  font-size:clamp(18px,2.4vw,24px);
+  line-height:1.3;margin:0 auto 24px;max-width:640px;
+}
+.hero-img{max-width:512px;margin:0 auto 24px;}
+.hero-sub{
+  font-family:var(--body);font-weight:400;color:#ECEFF3;
+  font-size:clamp(16px,1.7vw,18px);
+  line-height:1.3;margin:0 auto;max-width:440px;
+}
+
+/* ---------- card "para ti si" ---------- */
+.checkcard{
+  background:#fff;
+  max-width:660px;margin:40px auto 0;
+  padding:32px 24px;
+}
+.checkcard h3{
+  font-family:var(--body);font-weight:700;font-size:16px;
+  margin:0 0 20px;text-align:center;
+}
+.checkcard p{
+  font-family:var(--body);font-weight:400;
+  font-size:14px;line-height:1.45;
+  margin:0 0 16px;
+}
+.checkcard p:last-child{margin-bottom:0;}
+@media(min-width:769px){
+  .checkcard h3{text-align:left;font-size:24px;}
+  .checkcard p{font-size:20px;line-height:1.3;}
+}
+
+/* ---------- livros / bônus ---------- */
+.book{
+  display:grid;
+  grid-template-columns:1fr;
+  justify-items:center;
+  gap:16px;
+  padding:32px 24px;
+  margin-bottom:24px;
+}
+.book--brown{background:var(--brown);}
+.book--brown p{color:#fff;}
+.book--beige{background:var(--beige);}
+.book--beige p{color:var(--ink-soft);}
+.book img{max-width:300px;}
+.book p{
+  font-family:var(--body);font-weight:400;
+  font-size:14px;line-height:1.3;text-align:center;margin:0;
+}
+@media(min-width:769px){
+  .book{padding:40px;}
+  .book img{max-width:420px;}
+  .book p{font-size:18px;max-width:480px;}
+}
+
+/* ---------- ventajas ---------- */
+.adv{
+  display:flex;align-items:flex-start;gap:12px;
+  background:var(--card);
+  padding:16px 20px;
+  margin-bottom:12px;
+}
+.adv-icon{width:28px;flex:0 0 28px;margin-top:2px;}
+.adv b{font-family:var(--body);font-weight:700;font-size:14px;display:block;margin-bottom:4px;}
+.adv span{font-family:var(--body);font-weight:400;font-size:14px;line-height:1.3;}
+@media(min-width:769px){
+  .adv{padding:20px 24px;gap:16px;}
+  .adv-icon{width:40px;flex:0 0 40px;}
+}
+
+/* ---------- quién puede usarlo ---------- */
+.who{max-width:520px;margin:0 auto 24px;background:var(--card);}
+.who img{width:100%;}
+.who-body{padding:14px 16px;}
+.who-body b{font-family:var(--body);font-weight:700;font-size:14px;display:block;margin-bottom:4px;}
+.who-body span{font-family:var(--body);font-weight:400;font-size:14px;line-height:1.3;}
+
+/* ---------- bônus ---------- */
+.bonus{
+  background:var(--card);
+  display:grid;grid-template-columns:1fr;
+  gap:16px;align-items:center;
+  padding:28px 24px;
+  margin-bottom:28px;
+}
+.bonus-img{order:-1;justify-self:center;max-width:260px;}
+.bonus-tag{font-family:var(--body);font-size:18px;margin:0 0 8px;}
+.bonus-tag b{font-weight:700;}
+.bonus-title{font-family:var(--body);font-weight:700;font-size:14px;margin:0 0 12px;line-height:1.3;}
+.bonus-desc{font-family:var(--body);font-weight:400;font-size:14px;line-height:1.3;margin:0 0 12px;}
+.bonus-price{font-family:var(--body);font-weight:700;font-size:18px;margin:0;}
+.bonus-price s{color:var(--red);}
+.bonus-price em{color:var(--price);font-style:normal;}
+@media(min-width:769px){
+  .bonus{grid-template-columns:1fr 1fr;gap:32px;padding:40px;}
+  .bonus-img{order:0;max-width:100%;}
+  .bonus-tag{font-size:20px;}
+  .bonus-title{font-size:16px;}
+}
+
+/* ---------- oferta (card preto) ---------- */
+.offer{background:var(--dark);padding:48px 24px;max-width:940px;margin:0 auto;text-align:center;}
+.offer-img{max-width:480px;margin:0 auto 32px;}
+.offer-kicker{
+  font-family:var(--display);font-weight:500;color:#fff;
+  font-size:clamp(24px,3vw,35px);line-height:1.3;margin:0 0 16px;
+}
+.offer-price{
+  font-family:var(--body);font-size:clamp(20px,2.2vw,24px);
+  line-height:1.3;margin:0 0 6px;color:#fff;
+}
+.offer-price b{color:var(--green);font-weight:700;}
+.offer-note{font-family:var(--body);font-weight:400;color:#fff;font-size:12px;margin:0 0 40px;}
+.offer-head{
+  font-family:var(--body);font-weight:400;color:#fff;
+  font-size:clamp(20px,3vw,40px);line-height:1.3;margin:0 0 24px;
+}
+.offer-head span{font-family:var(--display);font-weight:500;color:var(--beige);}
+.offer-list{
+  list-style:none;padding:0;margin:0 auto 32px;
+  max-width:440px;text-align:left;
+  font-family:var(--body);font-weight:400;color:#ECEFF3;
+  font-size:12px;line-height:1.3;
+}
+.offer-list li{margin-bottom:14px;}
+.offer-limit{font-family:var(--body);font-weight:700;color:var(--gold);font-size:clamp(20px,2.4vw,24px);margin:0 0 8px;}
+.offer-slots{font-family:var(--body);font-weight:400;color:#fff;font-size:15px;margin:0;}
+.offer-delivery{font-family:var(--body);font-weight:400;color:#ECEFF3;font-size:clamp(12px,1.8vw,25px);margin:24px 0 0;}
+@media(min-width:769px){.offer-list{font-size:15px;}}
+
+/* ---------- garantía ---------- */
+.guarantee-head{
+  display:flex;align-items:center;justify-content:center;gap:20px;
+  margin:0 auto 32px;flex-wrap:wrap;
+}
+.guarantee-head img{width:120px;flex:0 0 120px;}
+.guarantee-head h2{
+  font-family:var(--display);font-weight:500;
+  font-size:clamp(24px,3vw,40px);line-height:1.3;margin:0;text-align:left;
+}
+.guarantee-body{text-align:center;max-width:660px;margin:0 auto;}
+.guarantee-body h3{font-family:var(--body);font-weight:700;font-size:clamp(16px,2vw,25px);line-height:1.3;margin:0 0 20px;}
+.guarantee-body p{font-family:var(--body);font-weight:400;font-size:clamp(13px,1.4vw,15px);line-height:1.3;margin:0 0 16px;}
+@media(min-width:769px){.guarantee-head img{width:194px;flex:0 0 194px;}}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:660px;margin:0 auto;}
+.faq h3{font-family:var(--body);font-weight:700;font-size:16px;line-height:1.3;margin:0 0 12px;}
+.faq p{font-family:var(--body);font-weight:400;font-size:clamp(10px,1.6vw,20px);line-height:1.3;margin:0 0 32px;}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <h1 class="hero-brand">CÓDIGO DIVINO</h1>
+    <h2 class="hero-head">COMPRENDE LA BIBLIA DE PRINCIPIO A FIN CON CLARIDAD, PROFUNDIDAD Y PODER ESPIRITUAL</h2>
+    <div class="hero-img">
+      <img
+        src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768/mv0J6lreP1hM886K/mockup-ca3digo-divino-copiar-mv0JOxgVJxsM0wXR.webp"
+        srcset="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=480/mv0J6lreP1hM886K/mockup-ca3digo-divino-copiar-mv0JOxgVJxsM0wXR.webp 480w,
+                https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768/mv0J6lreP1hM886K/mockup-ca3digo-divino-copiar-mv0JOxgVJxsM0wXR.webp 768w,
+                https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1024/mv0J6lreP1hM886K/mockup-ca3digo-divino-copiar-mv0JOxgVJxsM0wXR.webp 1024w"
+        sizes="(max-width:768px) 90vw, 512px"
+        width="512" height="455" fetchpriority="high" alt="">
+    </div>
+    <p class="hero-sub">Un estudio visual y didáctico que revela los misterios y enseñanzas de toda la Biblia de una manera clara, organizada y accesible para todos</p>
+    <a class="btn" href="XXXXX">QUIERO COMPRENDER LA BIBLIA</a>
+  </div>
+</header>
+
+<!-- ============ ¿QUÉ ES? ============ -->
+<section class="bg-beige">
+  <div class="wrap">
+    <h2 class="sec-title">¿Qué es CÓDIGO DIVINO?</h2>
+    <p class="lead narrow" style="font-family:var(--mont);">Es un material exclusivo que te lleva a través de toda la historia de la Biblia con bosquejos visuales, ilustraciones impactantes y explicaciones claras, diseñadas para ayudarte a entender y aplicar la Palabra de Dios como nunca antes.</p>
+
+    <div class="checkcard">
+      <h3>Este material es para ti si:</h3>
+      <p>✔️ Quieres comprender verdaderamente cada capítulo y versículo de la Biblia.</p>
+      <p> ✔️ Quieres enseñar a otros de manera didáctica y espiritual.</p>
+      <p> ✔️ Buscas una forma visual y práctica de memorizar historias y enseñanzas.</p>
+      <p> ✔️ Deseas aprender sobre la vida y enseñanzas de Jesús de forma clara.</p>
+      <p> ✔️ Te sientes frustrado al leer la Biblia sin entender su mensaje profundo.</p>
+    </div>
+
+    <a class="btn" href="XXXXX">SI, QUIERO</a>
+  </div>
+</section>
+
+<!-- ============ ¿QUÉ INCLUYE? ============ -->
+<section class="bg-white">
+  <div class="wrap">
+    <h2 class="sec-title">¿Qué incluye <span class="h-gold">CÓDIGO DIVINO</span>?</h2>
+    <p class="lead narrow">Recibirás una biblioteca espiritual completa, compuesta por estudios visuales, devocionales y explicaciones versículo por versículo de los principales libros de la Biblia:</p>
+
+    <div class="narrow">
+      <!-- Josué -->
+      <div class="book book--brown">
+        <img
+          src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768/mv0J6lreP1hM886K/1754920122-AVLaED2RLRtvoNoe.png"
+          srcset="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=480/mv0J6lreP1hM886K/1754920122-AVLaED2RLRtvoNoe.png 480w,
+                  https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768/mv0J6lreP1hM886K/1754920122-AVLaED2RLRtvoNoe.png 768w,
+                  https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1024/mv0J6lreP1hM886K/1754920122-AVLaED2RLRtvoNoe.png 1024w"
+          sizes="(max-width:768px) 80vw, 420px" loading="lazy" alt="">
+        <p>Resumenes temáticos con enseñanzas, aplicaciones y oraciones que te guiarán por todo el libro de Josué de forma clara y visual.</p>
+      </div>
+
+      <!-- 30 días de oración -->
+      <div class="book book--beige">
+        <img
+          src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768/mv0J6lreP1hM886K/1754920171-mxBXLxJRznU0EWeB.png"
+          srcset="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=480/mv0J6lreP1hM886K/1754920171-mxBXLxJRznU0EWeB.png 480w,
+                  https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768/mv0J6lreP1hM886K/1754920171-mxBXLxJRznU0EWeB.png 768w,
+                  https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1024/mv0J6lreP1hM886K/1754920171-mxBXLxJRznU0EWeB.png 1024w"
+          sizes="(max-width:768px) 80vw, 420px" loading="lazy" alt="">
+        <p>Una guía devocional para fortalecer tu vida de oración durante 30 días, basada en los cinco primeros libros de la Biblia.</p>
+      </div>
+
+      <!-- Génesis -->
+      <div class="book book--brown">
+        <img
+          src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768/mv0J6lreP1hM886K/1754920422-Awv9xL6n15uK6Kpk.png"
+          srcset="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=480/mv0J6lreP1hM886K/1754920422-Awv9xL6n15uK6Kpk.png 480w,
+                  https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768/mv0J6lreP1hM886K/1754920422-Awv9xL6n15uK6Kpk.png 768w,
+                  https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1024/mv0J6lreP1hM886K/1754920422-Awv9xL6n15uK6Kpk.png 1024w"
+          sizes="(max-width:768px) 80vw, 420px" loading="lazy" alt="">
+        <p>Estudio profundo, práctico y espiritual de cada versículo del libro de Génesis, con reflexiones y aplicaciones diarias.</p>
+      </div>
+
+      <!-- Éxodo -->
+      <div class="book book--beige">
+        <img
+          src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768/mv0J6lreP1hM886K/1754920998-A85VW6bO0GF1zXo3.png"
+          srcset="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=480/mv0J6lreP1hM886K/1754920998-A85VW6bO0GF1zXo3.png 480w,
+                  https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768/mv0J6lreP1hM886K/1754920998-A85VW6bO0GF1zXo3.png 768w,
+                  https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1024/mv0J6lreP1hM886K/1754920998-A85VW6bO0GF1zXo3.png 1024w"
+          sizes="(max-width:768px) 80vw, 420px" loading="lazy" alt="">
+        <p>Comprensión clara y edificante del mensaje de Éxodo, explicado de forma accesible para todo lector.</p>
+      </div>
+
+      <!-- Levítico -->
+      <div class="book book--brown">
+        <img
+          src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768/mv0J6lreP1hM886K/1754921657-mnlJD7MLKVf1oD47.png"
+          srcset="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=480/mv0J6lreP1hM886K/1754921657-mnlJD7MLKVf1oD47.png 480w,
+                  https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768/mv0J6lreP1hM886K/1754921657-mnlJD7MLKVf1oD47.png 768w,
+                  https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1024/mv0J6lreP1hM886K/1754921657-mnlJD7MLKVf1oD47.png 1024w"
+          sizes="(max-width:768px) 80vw, 420px" loading="lazy" alt="">
+        <p>Guía espiritual para entender el propósito de las leyes, ofrendas y enseñanzas de Levítico, aplicadas a la vida moderna.</p>
+      </div>
+    </div>
+
+    <a class="btn" href="XXXXX">QUIERO COMPRENDER LA BIBLIA</a>
+  </div>
+</section>
+
+<!-- ============ VENTAJAS ============ -->
+<section class="bg-white">
+  <div class="wrap">
+    <h2 class="sec-title">Ventajas de usar <strong class="h-brown">CÓDIGO DIVINO</strong></h2>
+
+    <div class="narrow">
+      <div class="adv">
+        <img class="adv-icon" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=96/mv0J6lreP1hM886K/sinal-de-visto-d954JDv39ZCNNZgr.png" loading="lazy" alt="">
+        <div><b>Comprensión profunda:</b><span>Entenderás la narrativa bíblica desde Génesis hasta Apocalipsis.</span></div>
+      </div>
+      <div class="adv">
+        <img class="adv-icon" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=96/mv0J6lreP1hM886K/sinal-de-visto-d954JDv39ZCNNZgr.png" loading="lazy" alt="">
+        <div><b>Comprensión profunda:</b><span>Entenderás la narrativa bíblica desde Génesis hasta Apocalipsis.</span></div>
+      </div>
+      <div class="adv">
+        <img class="adv-icon" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=96/mv0J6lreP1hM886K/sinal-de-visto-d954JDv39ZCNNZgr.png" loading="lazy" alt="">
+        <div><b>Comprensión profunda:</b><span>Entenderás la narrativa bíblica desde Génesis hasta Apocalipsis.</span></div>
+      </div>
+      <div class="adv">
+        <img class="adv-icon" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=96/mv0J6lreP1hM886K/sinal-de-visto-d954JDv39ZCNNZgr.png" loading="lazy" alt="">
+        <div><b>Comprensión profunda:</b><span>Entenderás la narrativa bíblica desde Génesis hasta Apocalipsis.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ¿QUIÉN PUEDE USARLO? ============ -->
+<section class="bg-parchment">
+  <div class="wrap">
+    <h2 class="sec-title" style="color:#fff;">¿Quién puede usarlo?</h2>
+
+    <div class="who">
+      <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768/mv0J6lreP1hM886K/sala-dos-professores-por-que-a-escola-deve-se-preocupar-com-este-ambiente-2-AVLaE3W48lCNWVZ1.png" sizes="(max-width:768px) 90vw, 480px" loading="lazy" alt="">
+      <div class="who-body"><b>Profesores y Pastores</b><span>Material perfecto para clases, prédicas y discipulados.</span></div>
+    </div>
+
+    <div class="who">
+      <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768/mv0J6lreP1hM886K/discipulado-iglesias-1024x576-YZ9jqaWD25S24k20.jpg" sizes="(max-width:768px) 90vw, 480px" loading="lazy" alt="">
+      <div class="who-body"><b>Estudiantes y nuevos creyentes</b><span>Una forma sencilla y poderosa de aprender.</span></div>
+    </div>
+
+    <div class="who">
+      <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768/mv0J6lreP1hM886K/necessidades-formativas-escuta-professores-ALpP3B0j83FlqlyL.webp" sizes="(max-width:768px) 90vw, 480px" loading="lazy" alt="">
+      <div class="who-body"><b>Líderes de célula o grupos pequeños</b><span>Una herramienta que transforma vidas.</span></div>
+    </div>
+
+    <div class="who">
+      <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768/mv0J6lreP1hM886K/depositphotos_90554238-stock-photo-happy-young-family-reading-a-mxBXLjEWa7tPv4GP.jpg" sizes="(max-width:768px) 90vw, 480px" loading="lazy" alt="">
+      <div class="who-body"><b>Familias</b><span>Enseña a tus hijos de forma visual y memorable.</span></div>
+    </div>
+
+    <a class="btn" href="XXXXX">SI, QUIERO APRENDER</a>
+  </div>
+</section>
+
+<!-- ============ BONOS ============ -->
+<section class="bg-white">
+  <div class="wrap">
+    <h2 class="sec-title">¡BONOS EXCLUSIVOS POR <strong class="h-gold" style="font-weight:700;">TIEMPO LIMITADO</strong>!</h2>
+    <p class="lead narrow" style="font-family:var(--mont);font-size:16px;">Al adquirir <strong>CÓDIGO DIVINO </strong>hoy, <strong>recibirás totalmente GRATIS estos 5 regalos exclusivos </strong>que complementarán tu estudio y crecimiento espiritual:</p>
+
+    <div class="narrow">
+      <!-- BONO 1 -->
+      <div class="bonus">
+        <div>
+          <p class="bonus-tag">🎁 <b>BONO 1</b></p>
+          <p class="bonus-title">Los 10 Mandamientos: Historia y Aplicación Espiritual</p>
+          <p class="bonus-desc">Descubre el origen, el significado profundo y cómo aplicar los mandamientos en la vida moderna. Una guía clara y reveladora para vivir según la voluntad de Dios.</p>
+          <p class="bonus-price"><s>DE $10</s> <em>Por $0</em></p>
+        </div>
+        <img class="bonus-img" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768/mv0J6lreP1hM886K/1754593755-mePJ4397ZvULDebL.png" sizes="(max-width:768px) 70vw, 420px" loading="lazy" alt="">
+      </div>
+
+      <!-- BONO 2 -->
+      <div class="bonus">
+        <div>
+          <p class="bonus-tag">🎁 <b>BONO 2</b></p>
+          <p class="bonus-title">Los Milagros de Jesús</p>
+          <p class="bonus-desc">Explora cada milagro realizado por el Señor: sanidades, prodigios y señales que siguen impactando vidas. Incluye contexto bíblico, reflexión y lección espiritual.</p>
+          <p class="bonus-price"><s>DE $10</s> <em>Por $0</em></p>
+        </div>
+        <img class="bonus-img" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768/mv0J6lreP1hM886K/1754593871-Y4LvzE71PnUOvDn5.png" sizes="(max-width:768px) 70vw, 420px" loading="lazy" alt="">
+      </div>
+
+      <!-- BONO 3 -->
+      <div class="bonus">
+        <div>
+          <p class="bonus-tag">🎁 <b>BONO 3</b></p>
+          <p class="bonus-title">Historias Bíblicas para toda la familia</p>
+          <p class="bonus-desc">Una colección visual y resumida de las historias más poderosas del Antiguo y Nuevo Testamento, ideal para enseñar a niños y adultos en casa o en la iglesia.</p>
+          <p class="bonus-price"><s>DE $10</s> <em>Por $0</em></p>
+        </div>
+        <img class="bonus-img" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768/mv0J6lreP1hM886K/1754593730-m6Lbn4NRZqUoJ327.png" sizes="(max-width:768px) 70vw, 420px" loading="lazy" alt="">
+      </div>
+
+      <!-- BONO 4 -->
+      <div class="bonus">
+        <div>
+          <p class="bonus-tag">🎁 <b>BONO 4</b></p>
+          <p class="bonus-title">Devocionales de Poder: 30 días para profundizar tu fe</p>
+          <p class="bonus-desc">Una serie de devocionales con reflexiones, versículos clave y oraciones para fortalecer tu conexión diaria con Dios.</p>
+          <p class="bonus-price"><s>DE $10</s> <em>Por $0</em></p>
+        </div>
+        <img class="bonus-img" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768/mv0J6lreP1hM886K/1754593687-dJobMGvyM8TbRGP6.png" sizes="(max-width:768px) 70vw, 420px" loading="lazy" alt="">
+      </div>
+
+      <!-- BONO 5 -->
+      <div class="bonus">
+        <div>
+          <p class="bonus-tag">🎁 <b>BONO 5</b></p>
+          <p class="bonus-title">Manual de Interpretación Bíblica para Principiantes</p>
+          <p class="bonus-desc">Una guía clara y práctica que te enseñará cómo interpretar correctamente los textos bíblicos, evitar errores comunes y aplicar los principios de hermenéutica de forma sencilla. Ideal para quienes desean profundizar en la comprensión del mensaje divino con responsabilidad y revelación.</p>
+          <p class="bonus-price"><s>DE $10</s> <em>Por $0</em></p>
+        </div>
+        <img class="bonus-img" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768/mv0J6lreP1hM886K/1754593781-m5KnqWzo1ltzlGw0.png" sizes="(max-width:768px) 70vw, 420px" loading="lazy" alt="">
+      </div>
+    </div>
+
+    <h3 class="sec-title" style="font-family:var(--mont);font-weight:700;font-size:clamp(16px,2.4vw,25px);margin-top:40px;">🎉 ¡Todo esto valorado en más de<s> $49 USD</s>…</h3>
+    <p class="lead narrow">¡Aprovecha esta oportunidad divina para profundizar en la Palabra con sabiduría y entendimiento visual!</p>
+    <h3 class="sec-title" style="font-family:var(--mont);font-weight:400;font-size:clamp(16px,2.4vw,25px);">totalmente <strong style="color:var(--green);font-weight:700;">GRATIS </strong>solo por tiempo limitado!</h3>
+
+    <a class="btn" href="XXXXX">QUIERO LOS BONOS</a>
+  </div>
+</section>
+
+<!-- ============ ¿TE HAS SENTIDO PERDIDO? ============ -->
+<section class="bg-beige-alt">
+  <div class="wrap">
+    <h2 class="sec-title">¿Te has sentido <span class="h-brown">perdido</span> al leer la <strong style="font-weight:700;">Biblia</strong>?</h2>
+    <p class="lead narrow" style="font-family:var(--mont);">Muchos creyentes luchan con la falta de disciplina y claridad. Intentan leer la Biblia pero se frustran por no saber cómo entenderla o aplicarla. CÓDIGO DIVINO es la guía visual que te toma de la mano y te acompaña a través de cada etapa del conocimiento bíblico.</p>
+  </div>
+</section>
+
+<!-- ============ MÁS DE 4.000 ============ -->
+<section class="bg-white">
+  <div class="wrap">
+    <h2 class="sec-title narrow">Más de 4.000 cristianos ya están transformando su estudio bíblico con nosotros.</h2>
+    <p class="lead narrow" style="font-size:clamp(16px,1.9vw,25px);"><strong>Testimonios reales</strong> de personas que ya viven una nueva experiencia espiritual gracias a este material.</p>
+  </div>
+</section>
+
+<!-- ============ OFERTA ============ -->
+<section class="bg-white" style="padding-top:0;">
+  <div class="wrap">
+    <div class="offer">
+      <div class="offer-img">
+        <img
+          src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768/mv0J6lreP1hM886K/mockup-ca3digo-divino-copiar-mv0JOxgVJxsM0wXR.webp"
+          srcset="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=480/mv0J6lreP1hM886K/mockup-ca3digo-divino-copiar-mv0JOxgVJxsM0wXR.webp 480w,
+                  https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768/mv0J6lreP1hM886K/mockup-ca3digo-divino-copiar-mv0JOxgVJxsM0wXR.webp 768w,
+                  https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1024/mv0J6lreP1hM886K/mockup-ca3digo-divino-copiar-mv0JOxgVJxsM0wXR.webp 1024w"
+          sizes="(max-width:768px) 70vw, 480px" loading="lazy" alt="">
+      </div>
+
+      <h2 class="offer-kicker">PRECIO ESPECIAL DE LANZAMIENTO</h2>
+      <p class="offer-price">¡Llévate TODO esto por solo <b>$9,90 USD!</b></p>
+      <p class="offer-note">(Puedes pagar en tu moneda local)</p>
+
+      <h3 class="offer-head">Al acceder hoy a <span>CÓDIGO DIVINO</span>, recibirás:</h3>
+
+      <ul class="offer-list">
+        <li>✅ 170 Bosquejos del Libro de Josué</li>
+        <li>✅ Exodo - Versiculo por Versiculo</li>
+        <li>✅ Genesis - Versiculo por Versiculo</li>
+        <li>✅ Levitico - Versiculo por Versiculo</li>
+        <li>✅ 30 Dias de Oración</li>
+        <li>🎁 BONO 1: Los 10 Mandamientos</li>
+        <li>🎁 BONO 2: Los Milagros de Jesús</li>
+        <li>🎁 BONO 3: Historias Bíblicas para toda la familia</li>
+        <li>🎁 BONO 4: Devocionales de Poder</li>
+        <li>🎁 BONO 5: Manual de Interpretación Bíblica para Principiantes</li>
+        <li>🔒 Acceso seguro y 100% digital</li>
+        <li>📱 Compatible con cualquier dispositivo</li>
+      </ul>
+
+      <p class="offer-limit">Oferta limitada</p>
+      <p class="offer-slots">últimos cupos disponibles</p>
+
+      <a class="btn" href="XXXXX">QUIERO EL CÓDIGO DIVINO</a>
+
+      <p class="offer-delivery">📩 Entrega inmediata al correo electrónico</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GARANTÍA ============ -->
+<section class="bg-white">
+  <div class="wrap">
+    <div class="guarantee-head">
+      <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=388/mv0J6lreP1hM886K/garantia-YrDNbk5xkXtbRqee.png" loading="lazy" alt="">
+      <h2>Garantía Incondicional de 7 Días</h2>
+    </div>
+
+    <div class="guarantee-body">
+      <h3>¿Aún tienes dudas? Tranquilo, tu compra está 100% protegida.</h3>
+      <p>Si por cualquier motivo el contenido que recibes no cumple con lo prometido, tienes hasta <strong>7 días</strong> para solicitar el reembolso <strong>completo</strong>, sin preguntas ni complicaciones.</p>
+      <p>Recuerda que tu acceso es <strong>de por vida</strong>, y constantemente añadimos nuevos materiales diseñados para fortalecer tu fe, tu ministerio y tu enseñanza en la Iglesia.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="bg-white">
+  <div class="wrap">
+    <h2 class="sec-title" style="text-align:left;max-width:660px;margin-left:auto;margin-right:auto;">❓ Preguntas Frecuentes (FAQ)</h2>
+
+    <div class="faq">
+      <h3>1. ¿Cómo recibiré el material después de la compra?</h3>
+      <p>Una vez confirmado el pago, recibirás un correo electrónico con el acceso inmediato a todo el contenido digital. No necesitas esperar ni pagar envío. Todo es 100% online y accesible desde cualquier dispositivo.</p>
+
+      <h3>2. ¿Y si el material no es lo que esperaba?</h3>
+      <p>No te preocupes. Tienes 7 días de garantía incondicional. Si el contenido no cumple tus expectativas, puedes solicitar tu reembolso total sin complicaciones.</p>
+
+      <h3>3. ¿Necesito tener conocimientos previos de la Biblia para aprovechar el contenido?</h3>
+      <p>¡Para nada! CÓDIGO DIVINO fue diseñado para todos: nuevos creyentes, estudiantes, líderes, padres o pastores. El lenguaje es claro, práctico y accesible.</p>
+
+      <h3>4. ¿Por qué es tan económico? ¿Es un producto confiable?</h3>
+      <p>Queremos que miles de personas tengan acceso a este estudio sin barreras. El bajo precio no refleja baja calidad, sino una misión: facilitar el aprendizaje bíblico a todo cristiano comprometido. Más de 4.000 personas ya han confiado en nosotros.</p>
+
+      <h3>5. ¿Puedo pagar en mi moneda local?</h3>
+      <p>Sí. Aunque el precio esté en USD, al momento de la compra podrás pagar automáticamente en tu moneda local, usando tarjeta de crédito, débito o billetera digital de forma segura.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BODY SCRIPTS: cole aqui se precisar ========== -->
+<!-- XXXXX -->
+
+</body>
+</html>
